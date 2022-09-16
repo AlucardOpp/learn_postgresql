@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:14.1-alpine
+    command: [
+      "postgres", 
+      "-c", 
+      "config_file=/etc/postgresql.conf",
+      "-c",
+      "hba_file=/etc/pg_hba.conf"
+    ]
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+    # почему-то на моем компьютере не работает порт 5432
+      - '8888:5432'
+    volumes: 
+      - volsu_db:/var/lib/postgresql/data
+      - ./pg_hba.conf:/etc/pg_hba.conf
+      - ./postgresql.conf:/etc/postgresql.conf
+      - ./temp_folder:/temp_folder
+
+volumes:
+  volsu_db:

@@ -1,0 +1,1 @@
+INSERT INTO item (descr, sell_price, cost_price) VALUES ('Widget', 10.00, 5.00), ('Gadget', 20.00, 10.00), ('Inspector', 30.00, 15.00);
