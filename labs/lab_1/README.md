@@ -300,6 +300,10 @@ CREATE TYPE job_title AS ENUM ('manager', 'developer', 'tester');
         |           |               |      | tester    |          |                   |
 ```
 
+3. Добавить значение в созданный ENUM тип HR_usha
+```sql
+ALTER TYPE job_title ADD VALUE 'HR_usha';
+```
 ### 11. Создать таблицу сотрудников employee с указанием их дней работы с полями: employee_id serial, first_name text, last_name text, workdays integer[], job_title job_title, salary numeric(7, 2)
 
 1. Создать таблицу employee
