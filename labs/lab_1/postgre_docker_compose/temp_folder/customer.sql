@@ -1,1 +1,2 @@
-INSERT INTO customer (title, first_name, last_name, addessline, town, zipcode, phone) VALUES ('Mr.', 'John', 'Smith', '1 Main Street', 'London', 'W1 1AA', '01234 567890'), ('Mrs.', 'Jane', 'Doe', '2 High Street', 'Bristol', 'BS2 2BB', '02345 678901');
+-- INSERT INTO customer (title, first_name, last_name, addessline, town, zipcode, phone) VALUES ('Mr.', 'John', 'Smith', '1 Main Street', 'London', 'W1 1AA', '01234 567890'), ('Mrs.', 'Jane', 'Doe', '2 High Street', 'Bristol', 'BS2 2BB', '02345 678901');
+SELECT * FROM pg_roles;

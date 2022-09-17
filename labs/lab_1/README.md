@@ -262,7 +262,17 @@ DELETE FROM customer;
 COPY customer FROM '/temp_folder/customer.txt';
 ```
 
-9. Создать скрипты на создание таблиц БД, заполнение и удаление. Запустить скрипты.
+3. Скопировать только определенные колонки из таблицы. Из таблицы в файл.
+```sql
+COPY  customer ( first_name, last_name )  TO '/temp_folder/customer_2.txt';
+```
+
+4. Скопировать только определенные колонки из таблицы. Из файла в таблицу.
+```sql
+COPY customer ( first_name, last_name ) FROM '/temp_folder/customer_2.txt';
+```
+
+### 9. Создать скрипты на создание таблиц БД, заполнение и удаление. Запустить скрипты.
 
 1. Запустить скрипт из файла
 ```sql
@@ -270,7 +280,7 @@ COPY customer FROM '/temp_folder/customer.txt';
 \i /temp_folder/item.sql
 ```
 
-10. Создать перечислимый тип job_title 
+### 10. Создать перечислимый тип job_title 
 
 1. Создать перечислимый тип job_title
 ```sql
